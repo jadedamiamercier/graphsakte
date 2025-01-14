@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphique 3</title>
+    <title>Skateparks Bar Chart</title>
     <style>
+        /* Global styles */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
-            color: #6A4E23;
+            background-color: #ffffff; /* Background of the page */
+            color: white ; /* Marron for text */
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,7 +22,7 @@
         h1 {
             text-align: center;
             font-size: 24px;
-            color: #6A4E23;
+            color: withe; /* Marron for the title */
             margin-bottom: 20px;
         }
 
@@ -29,17 +30,19 @@
             width: 80%;
             max-width: 1000px;
         }
+
+        canvas {
+            background-color: transparent; /* Ensure canvas background is transparent */
+        }
     </style>
 </head>
 <body>
-    <h1>Cities with The Most Skateparks in The World</h1>
+   
     <div id="chart-container">
         <canvas id="skateparkChart"></canvas>
     </div>
 
-    <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Include the custom JavaScript for the chart -->
-    <script src="./graph3.js"></script>
+    <script src="skatepark-chart.js"></script>
 </body>
 </html>
