@@ -28,14 +28,14 @@ main {
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 h2 {
-    font-size: 1.2rem; /* Taille plus petite pour les sous-titres */
+    font-size: 1.5rem; /* Taille plus petite pour les sous-titres */
     color: #6A4E23;
     text-align: center; /* Centrer les sous-titres */
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .chart-container {
@@ -59,13 +59,13 @@ iframe {
     display: block;
     margin: 0 auto;
     width: 100%; /* Prendre 100% de la largeur */
-    height: 700px; /* Fixer la hauteur des graphiques */
+    height: 1000px; /* Fixer la hauteur des graphiques */
     border: none;
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     iframe {
-        height: 600px; /* Limiter la hauteur pour les petits écrans */
+        height: 800px; /* Limiter la hauteur pour les petits écrans */
     }
 }
