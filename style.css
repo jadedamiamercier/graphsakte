@@ -32,8 +32,10 @@ section {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem; /* Taille plus petite pour les sous-titres */
     color: #6A4E23;
+    text-align: center; /* Centrer les sous-titres */
+    margin: 10px 0;
 }
 
 .chart-container {
@@ -41,6 +43,7 @@ h2 {
     margin: 20px 0;
 }
 
+/* Footer styles */
 footer {
     background-color: #6A4E23;
     color: white;
@@ -55,7 +58,14 @@ footer {
 iframe {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Prendre 100% de la largeur */
+    height: 700px; /* Fixer la hauteur des graphiques */
     border: none;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    iframe {
+        height: 600px; /* Limiter la hauteur pour les petits écrans */
+    }
 }
