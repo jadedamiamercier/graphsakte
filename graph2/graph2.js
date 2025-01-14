@@ -62,7 +62,7 @@ arcs
       .append("text")
       .attr("id", "brandName")
       .attr("x", 0)
-      .attr("y", -radius - 40)
+      .attr("y", -radius - 20)
       .attr("text-anchor", "middle")
       .style("font-size", "20px")
       .style("fill", brandTitleColor)
