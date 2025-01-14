@@ -67,6 +67,13 @@ h2 {
     border: none;
 }
 
+/* Centre le graphique 1 */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Footer styles */
 footer {
     background-color: #6A4E23;
