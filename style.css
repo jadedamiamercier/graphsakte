@@ -10,17 +10,16 @@ body {
 
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 20px; /* Plus de padding pour mieux espacer */
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Taille plus grande pour le titre */
     margin-bottom: 10px;
 }
 
 p {
-    width: 80%;
-    max-width: 600px; /* Limite la largeur à 600px */
+    width: 80%; /* Augmente la largeur pour plus d'aération */
     margin: 0 auto;
     text-align: justify;
 }
@@ -30,11 +29,11 @@ main {
 }
 
 section {
-    margin-bottom: 80px;
+    margin-bottom: 80px; /* Plus d'espace entre les sections */
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Taille plus petite pour les sous-titres */
     color: #6A4E23;
     text-align: center;
     margin: 20px 0;
@@ -45,47 +44,35 @@ h2 {
     margin: 20px 0;
 }
 
-.chart-container iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 600px;
-    border: none;
-}
-
-/* Full-width and height for Graphique 3 */
-.chart-container.graph3 {
-    width: 100%; /* Occupation de la largeur complète */
-    height: 100vh; /* Occupation de la hauteur complète de la fenêtre */
-    margin: 0; /* Pas de marge */
-    padding: 0;
-}
-
-.chart-container.graph3 iframe {
-    width: 100%; /* L'iframe prend toute la largeur du conteneur */
-    height: 100vh; /* L'iframe prend toute la hauteur de l'écran */
-    border: none;
-}
-
-/* Centre le graphique 1 */
+/* Add center class to center the content */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Footer styles */
-footer {
-    background-color: #6A4E23;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Full width for Graph 3 */
+.full-width {
     width: 100%;
 }
 
-/* Responsive styles */
+/* Make sure iframe fills the container properly */
+iframe {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 600px; /* Initial height for other graphs */
+    border: none;
+}
+
+/* Increase size for Graph 3 */
+.full-width iframe {
+    height: 900px; /* Larger height for Graph 3 */
+}
+
+/* Responsive styles for small screens */
 @media (max-width: 768px) {
     iframe {
-        height: 500px;
+        height: 500px; /* Limiter la hauteur des graphiques sur petits écrans */
     }
 }
