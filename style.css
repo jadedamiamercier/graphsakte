@@ -45,30 +45,34 @@ h2 {
     margin: 20px auto; /* Centrer les graphiques */
 }
 
-footer {
-    background-color: #6A4E23;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+.chart-container.graph3 {
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: none; /* Supprime la limite de largeur */
+    height: 800px; /* Augmente la hauteur */
 }
 
 iframe {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 800px; /* Largeur maximale pour centrer */
     height: 600px;
     border: none;
+}
+
+.chart-container.graph3 iframe {
+    height: 800px; /* Augmente la hauteur pour le Graphique 3 */
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     iframe {
-        height: 500px; /* Limiter la hauteur des graphiques sur petits écrans */
+        height: 500px;
+    }
+    .chart-container.graph3 iframe {
+        height: 600px; /* Taille réduite sur petits écrans */
     }
     p {
-        max-width: 100%; /* Ajuster la largeur des paragraphes */
-        padding: 0 10px; /* Ajouter un peu d'espace sur les côtés */
+        max-width: 100%;
+        padding: 0 10px;
     }
 }
