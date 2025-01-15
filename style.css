@@ -6,11 +6,16 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    text-align: center; /* Centrer tout le texte de la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 header {
+    text-align: center;
     padding: 30px 20px;
+    width: 100%;
 }
 
 h1 {
@@ -19,34 +24,41 @@ h1 {
 }
 
 p {
-    width: 80%; /* Augmente la largeur pour plus d'aération */
+    width: 10cm; /* Limiter la largeur des paragraphes à environ 10 cm */
     margin: 0 auto;
     text-align: justify;
 }
 
 main {
     padding: 30px 20px;
+    width: 100%;
 }
 
-/* Section container centré */
-.center {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    width: 100%;
     margin-bottom: 80px;
 }
 
-/* Centrer les graphiques dans leur container */
+h2 {
+    font-size: 1.3rem;
+    color: #6A4E23;
+    text-align: center;
+    margin: 20px 0;
+    width: 10cm; /* Limiter la largeur du titre également */
+}
+
 .chart-container {
-    width: 10cm; /* Taille approximative de 10 cm pour les graphiques 1 et 2 */
+    width: 10cm; /* Limiter la largeur des graphiques à 10 cm */
     margin: 20px auto;
 }
 
 .chart-container iframe {
     width: 100%;
-    height: 600px; /* Hauteur standard */
+    height: 600px;
     border: none;
 }
 
@@ -55,16 +67,20 @@ main {
     width: 100%;
 }
 
-/* Make sure iframe fills the container properly */
 .full-width iframe {
     height: 900px; /* Plus grand pour le Graphique 3 */
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
+    p, h2 {
+        width: 100%; /* Prendre toute la largeur sur petits écrans */
+    }
+
     .chart-container iframe {
         height: 500px; /* Limiter la hauteur des graphiques sur petits écrans */
     }
+
     .chart-container {
         width: 100%; /* Prendre toute la largeur sur petits écrans */
     }
