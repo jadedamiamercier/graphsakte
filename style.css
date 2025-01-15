@@ -52,13 +52,14 @@ h2 {
 }
 
 .chart-container {
-    width: 10cm; /* Limiter la largeur des graphiques à 10 cm */
+    width: 80%; /* Augmenter la largeur des graphiques */
+    max-width: 1200px; /* Limite de largeur pour les graphiques */
     margin: 20px auto;
 }
 
 .chart-container iframe {
     width: 100%;
-    height: 600px;
+    height: 600px; /* Taille des graphiques 1 et 2 */
     border: none;
 }
 
@@ -68,7 +69,7 @@ h2 {
 }
 
 .full-width iframe {
-    height: 900px; /* Plus grand pour le Graphique 3 */
+    height: 1000px; /* Plus grand pour le Graphique 3 */
 }
 
 /* Responsive styles for small screens */
