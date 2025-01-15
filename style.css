@@ -6,69 +6,83 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 header {
     text-align: center;
     padding: 30px 20px;
+    width: 100%;
 }
 
 h1 {
-    font-size: 3rem; /* Taille plus grande pour le titre */
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 p {
-    max-width: 10cm; /* Limiter la largeur à 10 cm */
-    margin: 0 auto; /* Centrer le paragraphe */
+    width: 10cm; /* Limiter la largeur des paragraphes à environ 10 cm */
+    margin: 0 auto;
     text-align: justify;
 }
 
 main {
     padding: 30px 20px;
+    width: 100%;
 }
 
 section {
-    margin-bottom: 80px; /* Plus d'espace entre les sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 80px;
 }
 
 h2 {
-    font-size: 1.3rem; /* Taille plus petite pour les sous-titres */
+    font-size: 1.3rem;
     color: #6A4E23;
     text-align: center;
     margin: 20px 0;
+    width: 10cm; /* Limiter la largeur du titre également */
 }
 
 .chart-container {
-    width: 80%; /* Limite à 80% pour une meilleure disposition */
-    max-width: 800px; /* Largeur maximale */
-    margin: 20px auto; /* Centrer les graphiques */
+    width: 80%; /* Augmenter la largeur des graphiques */
+    max-width: 1200px; /* Limite de largeur pour les graphiques */
+    margin: 20px auto;
 }
 
-footer {
-    background-color: #6A4E23;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.chart-container iframe {
     width: 100%;
-}
-
-iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 800px; /* Largeur maximale pour centrer */
-    height: 600px;
+    height: 600px; /* Taille des graphiques 1 et 2 */
     border: none;
+}
+
+/* Full width for Graph 3 */
+.full-width {
+    width: 100%;
+}
+
+.full-width iframe {
+    height: 1000px; /* Plus grand pour le Graphique 3 */
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
-    iframe {
+    p, h2 {
+        width: 100%; /* Prendre toute la largeur sur petits écrans */
+    }
+
+    .chart-container iframe {
         height: 500px; /* Limiter la hauteur des graphiques sur petits écrans */
     }
-    p {
-        max-width: 100%; /* Ajuster la largeur des paragraphes */
-        padding: 0 10px; /* Ajouter un peu d'espace sur les côtés */
+
+    .chart-container {
+        width: 100%; /* Prendre toute la largeur sur petits écrans */
     }
 }
