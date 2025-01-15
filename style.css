@@ -6,15 +6,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    text-align: center; /* Centrer tout le texte de la page */
 }
 
 header {
-    text-align: center;
-    padding: 30px 20px; /* Plus de padding pour mieux espacer */
+    padding: 30px 20px;
 }
 
 h1 {
-    font-size: 3rem; /* Taille plus grande pour le titre */
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -28,27 +28,26 @@ main {
     padding: 30px 20px;
 }
 
-section {
-    margin-bottom: 80px; /* Plus d'espace entre les sections */
-}
-
-h2 {
-    font-size: 1.3rem; /* Taille plus petite pour les sous-titres */
-    color: #6A4E23;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.chart-container {
-    width: 100%;
-    margin: 20px 0;
-}
-
-/* Add center class to center the content */
+/* Section container centré */
 .center {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Centrer les graphiques dans leur container */
+.chart-container {
+    width: 10cm; /* Taille approximative de 10 cm pour les graphiques 1 et 2 */
+    margin: 20px auto;
+}
+
+.chart-container iframe {
+    width: 100%;
+    height: 600px; /* Hauteur standard */
+    border: none;
 }
 
 /* Full width for Graph 3 */
@@ -57,22 +56,16 @@ h2 {
 }
 
 /* Make sure iframe fills the container properly */
-iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 600px; /* Initial height for other graphs */
-    border: none;
-}
-
-/* Increase size for Graph 3 */
 .full-width iframe {
-    height: 900px; /* Larger height for Graph 3 */
+    height: 900px; /* Plus grand pour le Graphique 3 */
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
-    iframe {
+    .chart-container iframe {
         height: 500px; /* Limiter la hauteur des graphiques sur petits écrans */
+    }
+    .chart-container {
+        width: 100%; /* Prendre toute la largeur sur petits écrans */
     }
 }
